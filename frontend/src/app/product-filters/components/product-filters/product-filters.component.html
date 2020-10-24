@@ -1,0 +1,12 @@
+<div class="input-group input-group-sm search-product">
+  <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="searchInputValue" name="search">
+  <span class="input-group-btn">
+        <button class="btn btn-default btn-sm" type="button" (click)="search()">Search</button>
+        <button class="btn btn-default btn-sm" type="button" (click)="resetFilters()">Reset</button>
+  </span>
+</div>
+<hr>
+<div class="product-categories">
+  <button *ngFor="let category of categories$ | async" type="button" class="btn btn-default btn-sm" (click)="selectCategory(category.code)">{{category.value}}</button>
+</div>
+<hr>

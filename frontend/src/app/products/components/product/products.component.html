@@ -1,0 +1,6 @@
+<div class="products-container">
+  <div class="product-item" *ngFor="let product of products$ | async; trackBy: trackByProducts"
+       (click)="sendProductIntoCart(product)">
+    {{product.title}}
+  </div>
+</div>

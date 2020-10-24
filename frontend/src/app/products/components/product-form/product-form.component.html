@@ -1,0 +1,35 @@
+<div class="form-header">Add New Product:</div>
+<form [formGroup]="newProductForm" (ngSubmit)="createProduct()" class="form-horizontal col-md-10" novalidate>
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Title</label>
+    <div class="feedback-container col-sm-8" [class.has-error]="title.invalid && title.touched">
+      <input type="text" class="form-control form-input" id="title" [formControl]="title" placeholder="Product title"
+             autocomplete="off">
+      <app-control-error formControlName="title"></app-control-error>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="category" class="col-sm-2 control-label">Category</label>
+    <div class="feedback-container col-sm-8" [class.has-error]="category.invalid && category.touched">
+      <select class="form-control col-sm-8 form-input" id="category" [formControl]="category">
+        <option *ngFor="let category of categories$ | async" [value]="category.code">
+          {{category.value}}
+        </option>
+      </select>
+      <app-control-error formControlName="category"></app-control-error>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="price" class="col-sm-2 control-label">Price</label>
+    <div class="feedback-container col-sm-8" [class.has-error]="price.invalid && price.touched">
+      <input type="number" class="form-control form-input" id="price" [formControl]="price" placeholder="Product price"
+             autocomplete="off">
+      <app-control-error formControlName="price"></app-control-error>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-6">
+      <button type="submit" class="btn btn-primary submit-btn">Add product</button>
+    </div>
+  </div>
+</form>

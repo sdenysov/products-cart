@@ -1,0 +1,24 @@
+@import "utils/colors";
+
+.form-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $color-text-dark;
+}
+
+.form-input {
+  &:focus {
+    border-color: $color-gray-dark;
+    box-shadow: inset 0 1px 1px $color-gray-light, 0 0 8px $color-gray-dark;
+  }
+}
+
+.submit-btn {
+  background-color: $color-gray;
+  border-color: $color-gray-dark;
+  &:focus, &:hover {
+    outline: none;
+    background-color: $color-gray-dark;
+    border-color: $color-gray-dark;
+  }
+}

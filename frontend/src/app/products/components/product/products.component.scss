@@ -1,0 +1,19 @@
+@import "utils/colors";
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1.5rem;
+}
+
+.product-item {
+  height: 14rem;
+  width: 11rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  line-height: 14rem;
+  color: $color-text-lightest;
+  background-color: $color-gray-dark;
+  cursor: pointer;
+}

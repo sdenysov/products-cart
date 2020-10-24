@@ -1,0 +1,23 @@
+@import "utils/colors";
+
+.search-product {
+  width: 40rem;
+  margin-top: 2rem;
+
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.product-categories {
+  button {
+    margin-left: 0;
+    margin-right: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
